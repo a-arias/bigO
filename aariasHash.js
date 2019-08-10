@@ -42,14 +42,15 @@ class HashTable {
 				keysArray.push(this.data[i][0][0])
 			}
 		}
+		console.log(keysArray);
 		return keysArray;
 	}
 }
 
 const myHashTable = new HashTable(50);
-myHashTable.set('grapes', 10000)
-myHashTable.set('grapes', 10000)
-myHashTable.get('grapes')
-myHashTable.set('apples', 9)
-myHashTable.get('apples')
-myHashTable.keys()
+myHashTable.set('grapes', 10000);
+myHashTable.set('grapes', 10000);
+myHashTable.get('grapes');
+myHashTable.set('apples', 9);
+myHashTable.get('apples');
+myHashTable.keys();
