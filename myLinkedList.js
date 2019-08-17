@@ -1,11 +1,11 @@
 // add a method prepend() to the linked list that adds a node to the beginning of the list
 
-class Node {
-	constructor(value){
-		this.value = value;
-		this.next = null;
-	}
-}
+// class Node {
+// 	constructor(value){
+// 		this.value = value;
+// 		this.next = null;
+// 	}
+// }
 
 class LinkedList {
 	constructor(value) {
@@ -16,6 +16,7 @@ class LinkedList {
 		this.tail = this.head;
 		this.length = 1;
 	}
+
 	append(value) {
 		const newNode = {
 			value: value,
@@ -24,7 +25,7 @@ class LinkedList {
 		this.tail.next = newNode;
 		this.tail = newNode;
 		this.length++;
-		return this;
+		return this.printList();
 	}
 
 	prepend(value) {
@@ -35,7 +36,18 @@ class LinkedList {
 		newNode.next = this.head;
 		this.head = newNode;
 		this.length++;
-		return this;
+		return this.printList();
+	}
+
+	printList() {
+		const array = [];
+		let currentNode = this.head;
+		while(currentNode !== null){
+			array.push(currentNode.value);
+			currentNode = currentNode.next
+		}
+		console.log(array);
+		return array;
 	}
 }
 
